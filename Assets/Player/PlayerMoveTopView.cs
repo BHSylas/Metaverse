@@ -63,7 +63,6 @@ public class PlayerMove : MonoBehaviour
             GetComponent<Animator>().Play(nowAnimation);
         }
 
-        Debug.Log($"H:{axisH}, V:{axisV}");
 
 
     }
