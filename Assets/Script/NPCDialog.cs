@@ -1,19 +1,34 @@
+Ôªøusing System.Linq;
 using UnityEngine;
 
 public class NPCDialog : MonoBehaviour
 {
-
+    [Header("References")]
     public DialogUI dialogUI;
+
+    [Header("Dialog Data")]
+    public int npcId = 1;
 
     private bool playerInRange = false;
     private bool isTalking = false;
 
-    [TextArea]
-    public string dialogLine = "æ»≥Á«œººø‰! ø¿¥√ ≥Øææ∞° ¡¡≥◊ø‰.";
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private DialogChoice[] choices;
+    private string[] dialogLines;
+    private int currentIndex = 0;
 
+    void Start()
+    {
+        DialogData data = DialogDB.LoadDialog(npcId);
 
-    // Update is called once per frame
+        if (data == null)
+        {
+            Debug.LogError("DialogData is null");
+            return;
+        }
+
+        choices = data.choices;
+    }
+
     void Update()
     {
         if (!playerInRange) return;
@@ -22,18 +37,74 @@ public class NPCDialog : MonoBehaviour
         {
             if (!isTalking)
             {
-                dialogUI.Conversation(dialogLine);
-                isTalking = true;
+                ShowChoices();
             }
             else
             {
-                dialogUI.Hide();
-                isTalking = false;
+                NextLine();
             }
+                
+        }
+            
+    }
+
+    void ShowChoices()
+    {
+        isTalking = true;
+        
+        string[] titles = choices.Select(c => c.title).ToArray();
+        dialogUI.ShowConversationList(titles, OnChoiceSelected);
+    }
+
+    void OnChoiceSelected(string title)
+    {
+        DialogChoice choice = System.Array.Find(choices, c => c.title == title);
+
+        dialogLines = choice.lines;
+        currentIndex = 0;
+
+        if(dialogLines.Length == 0)
+        {
+            EndConversation();
+            return;
         }
 
-
+        dialogUI.Conversation(dialogLines[currentIndex]);
     }
+
+    //void StartConversation()
+    //{
+    //    if(dialogLines == null || dialogLines.Length == 0)
+    //    {
+    //        Debug.LogWarning("ÎåÄÏÇ¨ ÏóÜÏùå");
+    //        return;
+    //    }
+
+    //    currentIndex = 0;
+    //    isTalking = true;
+
+    //    dialogUI.Conversation(dialogLines[currentIndex]);
+    //}
+
+    void NextLine()
+    {
+        currentIndex++;
+        if(currentIndex < dialogLines.Length)
+        {
+            dialogUI.Conversation(dialogLines[currentIndex]);
+        }
+        else
+        {
+            EndConversation();
+        }
+    }    
+
+    void EndConversation()
+    {
+        isTalking = false;
+        dialogUI.Hide();
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -49,8 +120,4 @@ public class NPCDialog : MonoBehaviour
         isTalking = false;
         dialogUI.Hide();
     }
-
-
-
-
 }
