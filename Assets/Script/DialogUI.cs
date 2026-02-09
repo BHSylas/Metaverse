@@ -49,7 +49,7 @@ public class DialogUI : MonoBehaviour
     {
         ClearChoices();
                panel.SetActive(false);  
-    }t
+    }
     void ClearChoices()
     {
         for (int i = choiceRoot.childCount - 1; i >= 0; i--)
