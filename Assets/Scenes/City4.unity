@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
   dialogUI: {fileID: 1134701879}
-  currentPlace: 
+  currentPlace: GR
 --- !u!1 &496160052
 GameObject:
   m_ObjectHideFlags: 0
