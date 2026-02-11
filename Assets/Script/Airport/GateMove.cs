@@ -45,6 +45,14 @@ public class GateMove : MonoBehaviour
     }
 
 
+    public static string CurrentPlace;
+
+    public void SetCountryFromWeb(string country)
+    {
+        CurrentPlace = country;
+        Debug.Log("웹에서 받은 place: " + country);
+    }
+
 
 
 

@@ -29,14 +29,12 @@
 <button onclick="sendCountry('GR')">GR</button>
 <button onclick="sendCountry('ALL')">ALL</button>
 
-<!-- ✅ 반드시 HTML에 canvas를 직접 둔다 -->
 <canvas id="unity-canvas"></canvas>
 
 <script src="Build/webggl.loader.js"></script>
 <script>
 let unityInstance = null;
 
-// ✅ DOM에 이미 존재하는 canvas를 가져온다
 const canvas = document.getElementById("unity-canvas");
 
 const config = {
@@ -67,6 +65,8 @@ function sendCountry(country) {
     country
   );
 }
+
+
 </script>
 
 </body>

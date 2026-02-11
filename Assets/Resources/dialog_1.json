@@ -1,28 +1,45 @@
-{
-  "npcId": 1,
-  "choices": [
-    {
-      "key": "HELLO",
-      "title": "안녕하세요",
-      "lines": [
-        "안녕하세요, 여행자님.",
-        "저희 나라는 처음이신가요?"
-      ]
-    },
-    {
-      "key": "QUIZ",
-      "title": "퀴즈 풀기",
-      "lines": [
-        "저희 나라에서 여행하실 때 유용한",
-        "몇 가지 표현을 알려 드릴게요."
-      ]
-    },
-    {
-      "key": "LEAVE",
-      "title": "취소",
-      "lines": [
-        "다음에 또 오세요!"
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "place": "JP",
+    "topic": "인사하기",
+    "npc_script": [
+      "안녕하세요, 여행자님.",
+      "여기는 일본입니다.",
+      "일본에 오신 걸 환영합니다."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 2,
+    "place": "JP",
+    "topic": "일본 소개",
+    "npc_script": [
+      "일본은 사계절이 뚜렷한 나라입니다.",
+      "봄에는 벚꽃이 유명하죠."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 3,
+    "place": "JP",
+    "topic": "간단한 퀴즈",
+    "npc_script": [
+      "이제 일본에 대해 간단한 문제를 풀어볼까요?"
+    ],
+    "question": "일본의 수도는 어디일까요?",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 4,
+    "place": "JP",
+    "topic": "대화 종료",
+    "npc_script": [
+      "다음에 또 방문해 주세요."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  }
+]

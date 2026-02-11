@@ -1,123 +1,66 @@
-﻿using System.Linq;
+﻿using System.Collections;
 using UnityEngine;
+using System.Linq;
 
 public class NPCDialog : MonoBehaviour
 {
-    [Header("References")]
     public DialogUI dialogUI;
-
-    [Header("Dialog Data")]
-    public int npcId = 1;
+    public string currentPlace;
 
     private bool playerInRange = false;
-    private bool isTalking = false;
-
-    private DialogChoice[] choices;
-    private string[] dialogLines;
-    private int currentIndex = 0;
-
-    void Start()
-    {
-        DialogData data = DialogDB.LoadDialog(npcId);
-
-        if (data == null)
-        {
-            Debug.LogError("DialogData is null");
-            return;
-        }
-
-        choices = data.choices;
-    }
 
     void Update()
     {
-        if (!playerInRange) return;
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isTalking)
-            {
-                ShowChoices();
-            }
-            else
-            {
-                NextLine();
-            }
-                
+            Talk();
         }
-            
     }
 
-    void ShowChoices()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        isTalking = true;
-        
-        string[] titles = choices.Select(c => c.title).ToArray();
-        dialogUI.ShowConversationList(titles, OnChoiceSelected);
+        if (other.CompareTag("Player"))
+            playerInRange = true;
     }
 
-    void OnChoiceSelected(string title)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        DialogChoice choice = System.Array.Find(choices, c => c.title == title);
+        if (other.CompareTag("Player"))
+            playerInRange = false;
+    }
 
-        dialogLines = choice.lines;
-        currentIndex = 0;
 
-        if(dialogLines.Length == 0)
+    public void Talk()
+    {
+        var list = DialogStorage.GetByPlace(PlaceReceiver.CurrentPlace);
+
+        if (list.Count == 0)
         {
-            EndConversation();
+            Debug.LogWarning("해당 place에 Dialog 없음: " + PlaceReceiver.CurrentPlace);
             return;
         }
 
-        dialogUI.Conversation(dialogLines[currentIndex]);
     }
 
-    //void StartConversation()
-    //{
-    //    if(dialogLines == null || dialogLines.Length == 0)
-    //    {
-    //        Debug.LogWarning("대사 없음");
-    //        return;
-    //    }
-
-    //    currentIndex = 0;
-    //    isTalking = true;
-
-    //    dialogUI.Conversation(dialogLines[currentIndex]);
-    //}
-
-    void NextLine()
+    IEnumerator PlayDialog(Dialog d)
     {
-        currentIndex++;
-        if(currentIndex < dialogLines.Length)
+        foreach (var line in d.npc_script)
         {
-            dialogUI.Conversation(dialogLines[currentIndex]);
+            dialogUI.Conversation(line);
+
+            // 스페이스 누를 때까지 대기
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+            // 스페이스에서 손을 뗄 때까지 대기
+            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
         }
-        else
+
+        if (!string.IsNullOrEmpty(d.question))
         {
-            EndConversation();
+            dialogUI.Conversation(d.question);
+            JSBridge.OnQuestionShown(d.id);
         }
-    }    
 
-    void EndConversation()
-    {
-        isTalking = false;
-        dialogUI.Hide();
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.CompareTag("Player")) return;
-        playerInRange = true;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (!other.CompareTag("Player")) return;
-
-        playerInRange = false;
-        isTalking = false;
         dialogUI.Hide();
     }
 }

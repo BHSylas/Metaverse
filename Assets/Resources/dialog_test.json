@@ -1,0 +1,180 @@
+[
+  {
+    "id": 1,
+    "place": "JP",
+    "topic": "인사하기",
+    "npc_script": [
+      "안녕하세요, 여행자님.",
+      "여기는 일본입니다.",
+      "일본에 오신 걸 환영합니다."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 2,
+    "place": "JP",
+    "topic": "일본 소개",
+    "npc_script": [
+      "일본은 사계절이 뚜렷한 나라입니다.",
+      "봄에는 벚꽃이 유명하죠."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 3,
+    "place": "JP",
+    "topic": "간단한 퀴즈",
+    "npc_script": [
+      "이제 일본에 대해 간단한 문제를 풀어볼까요?"
+    ],
+    "question": "일본의 수도는 어디일까요?",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 4,
+    "place": "JP",
+    "topic": "대화 종료",
+    "npc_script": [
+      "다음에 또 방문해 주세요."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+
+  
+  {
+    "id": 5,
+    "place": "US",
+    "topic": "인사하기",
+    "npc_script": [
+      "안녕하세요, 여행자님.",
+      "여기는 미국입니다.",
+      "미국에 오신 걸 환영합니다."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 6,
+    "place": "US",
+    "topic": "미국 소개",
+    "npc_script": [
+      "미국은 미국입니다.",
+      "아주 미국같죠."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 7,
+    "place": "US",
+    "topic": "간단한 퀴즈",
+    "npc_script": [
+      "이제 미국에 대해 간단한 문제를 풀어볼까요?"
+    ],
+    "question": "미국의 수도는 어디일까요?",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 8,
+    "place": "US",
+    "topic": "대화 종료",
+    "npc_script": [
+      "다음에 또 방문해 주세요."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+
+  
+  {
+    "id": 9,
+    "place": "CN",
+    "topic": "인사하기",
+    "npc_script": [
+      "안녕하세요, 여행자님.",
+      "여기는 중국입니다.",
+      "중국에 오신 걸 환영합니다."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 10,
+    "place": "CN",
+    "topic": "중국 소개",
+    "npc_script": [
+      "중국은 큽니다.",
+      "여러개로 나뉘어져 있죠."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 11,
+    "place": "CN",
+    "topic": "간단한 퀴즈",
+    "npc_script": [
+      "이제 중국에 대해 간단한 문제를 풀어볼까요?"
+    ],
+    "question": "중국의 수도는 어디일까요?",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 12,
+    "place": "CN",
+    "topic": "대화 종료",
+    "npc_script": [
+      "다음에 또 방문해 주세요."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+
+  
+  {
+    "id": 13,
+    "place": "GR",
+    "topic": "인사하기",
+    "npc_script": [
+      "안녕하세요, 여행자님.",
+      "여기는 독일입니다.",
+      "독일에 오신 걸 환영합니다."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 14,
+    "place": "GR",
+    "topic": "독일 소개",
+    "npc_script": [
+      "독일은 기술력이 대단합니다.",
+      "세계제일이죠."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 15,
+    "place": "GR",
+    "topic": "간단한 퀴즈",
+    "npc_script": [
+      "이제 독일에 대해 간단한 문제를 풀어볼까요?"
+    ],
+    "question": "독일에서 가장 유명한 술은 뭘까요?",
+    "next_dialog_id": 0
+  },
+  {
+    "id": 16,
+    "place": "GR",
+    "topic": "대화 종료",
+    "npc_script": [
+      "다음에 또 방문해 주세요."
+    ],
+    "question": "",
+    "next_dialog_id": 0
+  }
+]
