@@ -32,14 +32,21 @@ public class NPCDialog : MonoBehaviour
 
     public void Talk()
     {
-        var list = DialogStorage.GetByPlace(PlaceReceiver.CurrentPlace);
+        var list = DialogStorage.GetByPlace(currentPlace);
 
         if (list.Count == 0)
         {
-            Debug.LogWarning("해당 place에 Dialog 없음: " + PlaceReceiver.CurrentPlace);
+            Debug.LogWarning("해당 place에 Dialog 없음: " + currentPlace);
             return;
         }
 
+        string[] topics = list.Select(d => d.topic).ToArray();
+
+        dialogUI.ShowConversationList(topics, (selectedTopic) =>
+        {
+            var d = list.First(x => x.topic == selectedTopic);
+            StartCoroutine(PlayDialog(d));
+        });
     }
 
     IEnumerator PlayDialog(Dialog d)
