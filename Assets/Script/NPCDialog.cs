@@ -5,7 +5,8 @@ using System.Linq;
 public class NPCDialog : MonoBehaviour
 {
     public DialogUI dialogUI;
-    public string currentPlace;
+    [Tooltip("DialogStorage에서 가져올 때 사용할 place. Country와 다릅니다. 예: 'AIRPORT', 'CITY' 등")]
+    public string currentPlace; // DialogStorage에서 가져올 때 사용할 place. Country와 다릅니다. 예: 'AIRPORT', 'CITY' 등
 
     private bool playerInRange = false;
 
