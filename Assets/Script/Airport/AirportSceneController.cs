@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class AirportSceneController : MonoBehaviour
 {
@@ -7,14 +6,15 @@ public class AirportSceneController : MonoBehaviour
     private PortalDestination current;
     private GateMove gateMove;
     private CountryType currentCountry;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    /* Toggle verbose controller logs for country/web bridge diagnostics. */
+    private const bool VerboseLogging = true;
 
     void Awake()
     {
         gateMove = GetComponent<GateMove>();
 
-        if(gateMove == null)
+        if (gateMove == null)
         {
             Debug.LogError("GateMove component not found!");
         }
@@ -22,14 +22,12 @@ public class AirportSceneController : MonoBehaviour
 
     public void SetCountry(CountryType country)
     {
-
         currentCountry = country;
-
         current = null;
 
-        foreach(var d in destinations)
+        foreach (var d in destinations)
         {
-            if(d.country == country)
+            if (d.country == country)
             {
                 current = d;
                 break;
@@ -38,25 +36,30 @@ public class AirportSceneController : MonoBehaviour
 
         gameObject.SetActive(current != null);
 
-        if(current!=null)
+        if (current != null)
         {
             gateMove.SetTargetScene(current.sceneName);
-            Debug.Log($"¸ñÀûÁö ¼³Á¤ ¿Ï·á : {country} {current.sceneName}");
+            Debug.Log($"êµ­ê°€ ì„¤ì • ì™„ë£Œ: {country} -> {current.sceneName}");
+
+            // Send selected country to the Web layer after country is confirmed.
+            JSBridge.NotifyCountrySelected(country.ToString());
         }
         else
         {
-            Debug.LogWarning($"¸ñÀûÁö ¾øÀ½ : {country}");
+            Debug.LogWarning($"êµ­ê°€ ë¯¸ì„¤ì •: {country}");
         }
-
     }
 
     public void SetCountryFromWeb(string countryStr)
     {
-        Debug.Log("À¥¿¡¼­ ¹ŞÀº Country = " + countryStr);
+        if (VerboseLogging)
+        {
+            Debug.Log("ì›¹ì—ì„œ ë°›ì€ Country = " + countryStr);
+        }
 
         if (!System.Enum.TryParse(countryStr, out CountryType country))
         {
-            Debug.LogWarning("ÆÄ½Ì ½ÇÆĞ, ALL·Î Ã³¸®");
+            Debug.LogWarning("íŒŒì‹± ì‹¤íŒ¨, ALLë¡œ ì²˜ë¦¬");
             country = CountryType.ALL;
         }
 
@@ -65,12 +68,13 @@ public class AirportSceneController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("SetCountry È£ÃâµÊ: " + currentCountry);
+        if (VerboseLogging)
+        {
+            Debug.Log("SetCountry ì´ˆê¸° ìƒíƒœ: " + currentCountry);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
 }
