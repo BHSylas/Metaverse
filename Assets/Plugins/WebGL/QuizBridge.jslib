@@ -1,6 +1,12 @@
 mergeInto(LibraryManager.library, {
   OnQuestionShownJS: function(id) {
     console.log("퀴즈 트리거:", id);
+    if(typeof window.onQuestionShownFromUnity === "function") {
+      window.onQuestionShownFromUnity(id);
+    }
+    else {
+        console.warn("window.onQuestionShownFromUnity 함수가 정의되어 있지 않습니다.");
+    }
   },
   OnAirportLoadedJS : function() {
     console.log("공항 모델 로드 완료 이벤트(Unity -> Web)");
