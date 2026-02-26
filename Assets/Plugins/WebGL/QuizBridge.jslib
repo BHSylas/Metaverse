@@ -22,4 +22,13 @@ mergeInto(LibraryManager.library, {
         console.warn("window.onCountrySelectedFromUnity 함수가 정의되어 있지 않습니다.");
     }
   },
+  OnLoadingSceneLoadedJS: function() {
+    console.log("씬 로드 이벤트(Unity -> Web)");
+    if(typeof window.onSceneLoadedFromUnity === "function") {
+      window.onSceneLoadedFromUnity();
+    }
+    else {
+        console.warn("window.onSceneLoadedFromUnity 함수가 정의되어 있지 않습니다.");
+    }
+  },
 });

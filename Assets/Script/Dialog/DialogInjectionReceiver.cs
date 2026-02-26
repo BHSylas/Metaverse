@@ -8,7 +8,10 @@ public class DialogInjectionReceiver : MonoBehaviour
      * unityInstance.SendMessage("DialogInjectionReceiverObject", "InjectDialogsJson", jsonString)
      */
     public const string ReceiverObjectName = "DialogInjectionReceiverObject";
-
+    #if UNITY_WEBGL && !UNITY_EDITOR
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    private static extern void OnLoadingSceneLoadedJS();
+    #endif
     /* Toggle verbose logs for JSON injection flow tracing. */
     private const bool VerboseLogging = true;
 
@@ -19,6 +22,10 @@ public class DialogInjectionReceiver : MonoBehaviour
         {
             gameObject.name = ReceiverObjectName;
         }
+        #if UNITY_WEBGL && !UNITY_EDITOR
+        OnLoadingSceneLoadedJS();
+        Debug.Log("LoadingScene loaded, notified Web layer.");
+        #endif
     }
 
     public void InjectDialogsJson(string json)
@@ -30,12 +37,20 @@ public class DialogInjectionReceiver : MonoBehaviour
 
         try
         {
-            Dialog[] dialogs = DialogJsonHelper.FromJson<Dialog>(json);
+            // Parse JSON as DialogDTO array (from React/Web format)
+            DialogDTO[] dtos = DialogJsonHelper.FromJson<DialogDTO>(json);
 
-            if (dialogs == null)
+            if (dtos == null || dtos.Length == 0)
             {
-                Debug.LogWarning("[DialogInjectionReceiver] Parsed dialogs are null. Injection skipped.");
+                Debug.LogWarning("[DialogInjectionReceiver] Parsed dialog DTOs are null or empty. Injection skipped.");
                 return;
+            }
+
+            // Convert DTOs to internal Dialog format
+            Dialog[] dialogs = new Dialog[dtos.Length];
+            for (int i = 0; i < dtos.Length; i++)
+            {
+                dialogs[i] = dtos[i].ToDialog();
             }
 
             DialogStorage.Store(dialogs);
