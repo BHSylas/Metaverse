@@ -5,26 +5,26 @@ public class PlayerMoveSide : MonoBehaviour
     public float speed = 5f;
 
     Rigidbody2D rbody;
+    SpriteRenderer sr;
     float moveX;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveX = Input.GetAxis("Horizontal");
 
-        if(moveX > 0)
-            transform.localScale = new Vector3(1, 1, 1);
-        else if(moveX < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+        if (moveX > 0)
+            sr.flipX = false;
+        else if (moveX < 0)
+            sr.flipX = true;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         rbody.linearVelocity = new Vector2(moveX * speed, rbody.linearVelocity.y);
     }
