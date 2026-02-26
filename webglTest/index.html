@@ -121,6 +121,28 @@
                   unityInstance.SetFullscreen(1);
                 };
 
+                // Expose unity instance for React or host application integration.
+                window.unityInstance = unityInstance;
+
+                // Bridge: Unity -> Web country selection event.
+                window.addEventListener("unity:country-selected", function(event) {
+                  const country = event?.detail?.country || "ALL";
+                  console.log("[WebBridge] Country selected event received:", country);
+
+                  // TODO(React integration): replace this static map with API/fetch or state-store lookup.
+                  const countryDialogMap = {
+                    ALL: [],
+                    KOREA: [],
+                    USA: [],
+                    JAPAN: []
+                  };
+
+                  const jsonString = JSON.stringify(countryDialogMap[country] || countryDialogMap.ALL || []);
+
+                  // Fixed target object name in Unity scene:
+                  // GameObject: "DialogInjectionReceiverObject"
+                  unityInstance.SendMessage("DialogInjectionReceiverObject", "InjectDialogsJson", jsonString);
+                });
               }).catch((message) => {
                 alert(message);
               });
