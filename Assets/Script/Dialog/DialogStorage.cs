@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class DialogStorage
@@ -38,8 +39,10 @@ public static class DialogStorage
 
     public static List<Dialog> GetByPlace(string place)
     {
-        return dict.ContainsKey(place)
-            ? dict[place]
-            : new List<Dialog>();
+        if (place.ToLower() == "all")
+        {
+            return dict.Values.SelectMany(list => list).ToList();
+        }
+        return dict.ContainsKey(place) ? dict[place] : new List<Dialog>();
     }
 }
