@@ -17,7 +17,11 @@ public class PlayerMoveSide : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal");
-
+        if (!InputBinder.isInputEnabled)
+        {
+            moveX = 0f;
+            return;
+        }
         if (moveX > 0)
             sr.flipX = false;
         else if (moveX < 0)

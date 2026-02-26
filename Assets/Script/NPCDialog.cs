@@ -9,9 +9,10 @@ public class NPCDialog : MonoBehaviour
     public string currentPlace; // DialogStorage에서 가져올 때 사용할 place. Country와 다릅니다. 예: 'AIRPORT', 'CITY' 등
 
     private bool playerInRange = false;
-
     void Update()
     {
+        if(!InputBinder.isInputEnabled) 
+            return;
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Talk();

@@ -401,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadingScene
   waitTime: 3
   VerboseLogging: 1
+  receiver: {fileID: 0}
   NextScene: 
 --- !u!4 &1804519978
 Transform:
@@ -467,6 +468,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1587800065}
   - {fileID: 1804519978}
-  - {fileID: 1478445172}
   - {fileID: 1843104227}
   - {fileID: 1749804866}
