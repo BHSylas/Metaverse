@@ -25,6 +25,9 @@ public class DialogInjectionReceiver : MonoBehaviour
         #if UNITY_WEBGL && !UNITY_EDITOR
         OnLoadingSceneLoadedJS();
         Debug.Log("LoadingScene loaded, notified Web layer.");
+        //Dialogue Injection은 DialogInjectionReceiver의 initialize가 완료된 이후 실행되어야 하기 때문에, Web layer에서 이 시점에 주입을 시도하도록 안내하는 것이 안전합니다.
+        // LoadingScene에서 일방적으로 OnLoadingSceneLoadedJS를 호출할 경우 DialogInjectionReceiver가 아직 initialize되지 않은 시점에 Web layer에서 주입을 시도할 수 있기 때문에,
+        // DialogInjectionReceiver의 Awake에서 호출하도록 변경하였습니다.
         #endif
     }
 

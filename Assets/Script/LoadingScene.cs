@@ -48,6 +48,10 @@ public class LoadingScene : MonoBehaviour
     }
     public void SetCountryFromWeb(string countryStr)
     {
+        // React에서 SendMessage로 호출하는 메서드입니다. 
+        // AirportSceneController의 SetCountryFromWeb과는 별개입니다.
+        // AirportSceneController는 더 이상 사용되지 않기 때문에 LoadingScene에서 국가 정보를 받아옵니다.
+        // 이렇게 받는 국가 정보는 다음 신으로 넘기기 위해 필요합니다: City1, City2, City3...
         if (VerboseLogging)
         {
             Debug.Log("웹에서 받은 Country = " + countryStr);
@@ -77,6 +81,11 @@ public class LoadingScene : MonoBehaviour
 
     public void InjectDialogsJson(string json)
     {
+        // React에서 SendMessage로 호출하는 메서드입니다.
+        // DialogInjectionReceiver의 InjectDialogsJson 메서드를 호출하여 React에서 전달된 JSON 데이터를 주입합니다.
+        // 해당 메서드를 React에서 직접 호출을 시도한 결과 정상적으로 작동하지 않았기 때문에, LoadingScene에서 해당 메서드를 받아서 DialogInjectionReceiver로 전달하는 형태로 구현하였습니다.
+        // DialogInjectionReceiver는 LoadingScene에만 존재합니다.
+        // JSON 데이터는 React에서 전달되며, DialogInjectionReceiver에서 해당 데이터를 활용하여 대화 시스템에 적용합니다.
         if (VerboseLogging)
         {
             Debug.Log($"InjectDialogsJson called. raw={json}, payloadLength={(json ?? string.Empty).Length}");
