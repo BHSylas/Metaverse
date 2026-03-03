@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542187235259623065}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.71, y: 1.67, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.4796, z: 1}
+  m_LocalRotation: {x: 0.00016373614, y: 0.9998296, z: 0.013127863, w: -0.0129833445}
+  m_LocalPosition: {x: 4.6, y: 0.8, z: 0.04}
+  m_LocalScale: {x: 1.1042, y: 1.0820255, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8514027978036214586}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.505, y: 181.488, z: -0.001}
 --- !u!212 &8581525539203101080
 SpriteRenderer:
   serializedVersion: 2
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8771576754423055248, guid: 62087e6b13ec333448d69935e4cf2de1, type: 3}
+  m_Sprite: {fileID: 5119501903264777642, guid: 71da167a26596884f891058b5677a5e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5419095318098424771}
   - component: {fileID: 1475229885025781707}
-  - component: {fileID: 5943429013383800858}
   - component: {fileID: 9152078406738804649}
   - component: {fileID: 3422173649811875727}
   - component: {fileID: 8049922243149218118}
@@ -221,28 +220,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &5943429013383800858
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7755263815763550376}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de4e62b6fa31bdc44979cfd5d74f0824, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &9152078406738804649
 Rigidbody2D:
   serializedVersion: 5

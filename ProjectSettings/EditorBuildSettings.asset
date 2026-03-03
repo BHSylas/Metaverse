@@ -15,16 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScene.unity
     guid: 4beb00592f1aa474ebe2c8aebbe453cc
   - enabled: 1
-    path: Assets/Scenes/City1.unity
+    path: Assets/Scenes/City1_US.unity
     guid: 457468f6b526c0a478124399715ed3bc
   - enabled: 1
-    path: Assets/Scenes/City2.unity
+    path: Assets/Scenes/City2_JP.unity
     guid: 319e579c0dc863a4e9c9a5e283ec46c2
   - enabled: 1
-    path: Assets/Scenes/City3.unity
+    path: Assets/Scenes/City3_CN.unity
     guid: 460ba265af8bbf74b88bc9c0e42307f5
   - enabled: 1
-    path: Assets/Scenes/City4.unity
+    path: Assets/Scenes/City4_GR.unity
     guid: 85a067715e7ddf04aaaf087dfd421525
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
