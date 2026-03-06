@@ -3,15 +3,18 @@ using UnityEngine;
 public class AirportSceneController : MonoBehaviour
 {
     public PortalDestination[] destinations;
+
     private PortalDestination current;
     private GateMove gateMove;
     private CountryType currentCountry;
-    #if UNITY_WEBGL && !UNITY_EDITOR
-    [System.Runtime.InteropServices.DllImport("__Internal")]
-    private static extern string OnAirportLoadedJS();
-    #endif
 
-    /* Toggle verbose controller logs for country/web bridge diagnostics. */
+    private bool countryInitialized = false;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    private static extern void OnAirportLoadedJS();
+#endif
+
     private const bool VerboseLogging = true;
 
     void Awake()
@@ -24,7 +27,44 @@ public class AirportSceneController : MonoBehaviour
         }
     }
 
-    public void SetCountry(CountryType country)
+    void Start()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        OnAirportLoadedJS();
+#endif
+
+        if (VerboseLogging)
+        {
+            Debug.Log("AirportSceneController initialized. Waiting for country from Web...");
+        }
+    }
+
+    // ✅ Web에서만 호출되도록
+    public void SetCountryFromWeb(string countryStr)
+    {
+        if (countryInitialized)
+        {
+            if (VerboseLogging)
+                Debug.Log("Country already initialized. Ignoring duplicate call.");
+            return;
+        }
+
+        if (VerboseLogging)
+        {
+            Debug.Log("웹에서 받은 Country = " + countryStr);
+        }
+
+        if (!System.Enum.TryParse(countryStr, out CountryType country))
+        {
+            Debug.LogWarning("Country 파싱 실패. 로드 중단.");
+            return;
+        }
+
+        countryInitialized = true;
+        SetCountry(country);
+    }
+
+    private void SetCountry(CountryType country)
     {
         currentCountry = country;
         current = null;
@@ -38,55 +78,28 @@ public class AirportSceneController : MonoBehaviour
             }
         }
 
-        gameObject.SetActive(current != null);
-
-        if (current != null)
+        if (current == null)
         {
-            gateMove.SetTargetScene(CountryToScene(country));
-            Debug.Log($"국가 설정 완료: {country} -> {current.sceneName}");
-
-            // Send selected country to the Web layer after country is confirmed.
-            JSBridge.NotifyCountrySelected(country.ToString());
+            Debug.LogWarning($"해당 국가에 매칭되는 PortalDestination 없음: {country}");
+            return;
         }
-        else
+
+        string sceneName = CountryToScene(country);
+
+        if (string.IsNullOrEmpty(sceneName))
         {
-            Debug.LogWarning($"국가 미설정: {country}");
+            Debug.LogError("씬 이름이 유효하지 않음. 로드 중단.");
+            return;
         }
-    }
 
-    public void SetCountryFromWeb(string countryStr)
-    {
+        gateMove.SetTargetScene(sceneName);
+
         if (VerboseLogging)
         {
-            Debug.Log("웹에서 받은 Country = " + countryStr);
+            Debug.Log($"국가 설정 완료: {country} -> {sceneName}");
         }
 
-        if (!System.Enum.TryParse(countryStr, out CountryType country))
-        {
-            Debug.LogWarning("파싱 실패, ALL로 처리");
-            country = CountryType.ALL;
-        }
-
-        SetCountry(country);
-    }
-
-    void Start()
-    {
-        if (VerboseLogging)
-        {
-            Debug.Log("SetCountry 초기 상태: " + currentCountry);
-        }
-        SetCountry(currentCountry);
-#if UNITY_WEBGL && !UNITY_EDITOR
-        OnAirportLoadedJS();
-        if (VerboseLogging)
-        {
-            Debug.Log("Initialized; called OnAirportLoadedJS to notify Web layer.");
-            // 공항 신 로드가 완료된 후에 OnAirportLoadedJS를 호출해야 React에서 정상적으로 국가를 주입할 수 있습니다.
-            // 만약 신이 로드되기 전에 주입을 시도한다면 주입하는 상태가 의도와 다르게 적용될 가능성이(보통 반영이 안 될 겁니다) 발생할 수 있습니다.
-            // 이에 타 객체에서도 React에 이벤트를 전달해야 한다면 initialize 완료 후에 전달하여야 불필요한 버그를 줄일 수 있습니다.
-        }
-#endif
+        JSBridge.NotifyCountrySelected(country.ToString());
     }
 
     private string CountryToScene(CountryType country)
@@ -95,11 +108,10 @@ public class AirportSceneController : MonoBehaviour
         {
             case CountryType.US: return "City1";
             case CountryType.JP: return "City2";
-            case CountryType.GR: return "City3";
-            case CountryType.CN:
-            case CountryType.IT:
-            case CountryType.ALL:
-            default: return "?";
+            case CountryType.CN: return "City3";
+            case CountryType.GR: return "City4";
+            case CountryType.IT: return "City5";
+            default: return null;   //
         }
     }
 }

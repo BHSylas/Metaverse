@@ -11,15 +11,26 @@ public class DialogUI : MonoBehaviour
 
     public Transform choiceRoot;
     public Button choiceButtonPrefab;
+
+    public GameObject dialogBox;
+
+
+    public bool IsOpen => panel.activeSelf;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         panel.SetActive(false);
-        
+        dialogText.text = "";
     }
 
     public void Conversation(string line)
     {
+        if (string.IsNullOrEmpty(line))
+        {
+            panel.SetActive(false);
+            return;
+        }
+
         ClearChoices();
         panel.SetActive(true);
         dialogText.text = line;
@@ -28,7 +39,7 @@ public class DialogUI : MonoBehaviour
     public void ShowConversationList(string[] titles, Action<string> onSelected)
     {
         panel.SetActive(true);
-        dialogText.text= "";
+        //dialogText.text= "";
 
         ClearChoices();
 
@@ -48,7 +59,8 @@ public class DialogUI : MonoBehaviour
     public void Hide()
     {
         ClearChoices();
-               panel.SetActive(false);  
+        dialogText.text = "";
+        panel.SetActive(false);
     }
     void ClearChoices()
     {

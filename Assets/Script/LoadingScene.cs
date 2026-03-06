@@ -71,9 +71,9 @@ public class LoadingScene : MonoBehaviour
         {
             case CountryType.US: return "City1";
             case CountryType.JP: return "City2";
-            case CountryType.GR: return "City3";
-            case CountryType.CN:
-            case CountryType.IT:
+            case CountryType.CN: return "City3";
+            case CountryType.GR: return "City4";
+            case CountryType.IT: return "City5";
             case CountryType.ALL:
             default: return "?";
         }

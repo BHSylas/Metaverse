@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: ab044ca96a498974e82fd578d9e1f9b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 187108716676570332
+    second: unity_spinner_96_spritesheet_0
+  - first:
+      213: 1791714551666972507
+    second: unity_spinner_96_spritesheet_1
+  - first:
+      213: -907454005116263633
+    second: unity_spinner_96_spritesheet_2
+  - first:
+      213: -3285978009095936372
+    second: unity_spinner_96_spritesheet_3
+  - first:
+      213: -2676697493380176153
+    second: unity_spinner_96_spritesheet_4
+  - first:
+      213: -3129967974031785492
+    second: unity_spinner_96_spritesheet_5
+  - first:
+      213: -9220738169308020552
+    second: unity_spinner_96_spritesheet_6
+  - first:
+      213: -452912174845733450
+    second: unity_spinner_96_spritesheet_7
+  - first:
+      213: -5009123978206746824
+    second: unity_spinner_96_spritesheet_8
+  - first:
+      213: -3134630585018060358
+    second: unity_spinner_96_spritesheet_9
+  - first:
+      213: 279126306774400116
+    second: unity_spinner_96_spritesheet_10
+  - first:
+      213: -3215954768534181176
+    second: unity_spinner_96_spritesheet_11
+  - first:
+      213: 8869608431425474443
+    second: unity_spinner_96_spritesheet_12
+  - first:
+      213: -4974094296129262333
+    second: unity_spinner_96_spritesheet_13
+  - first:
+      213: 6339736218366231268
+    second: unity_spinner_96_spritesheet_14
+  - first:
+      213: 4665844860771658639
+    second: unity_spinner_96_spritesheet_15
+  - first:
+      213: -4213851864276791224
+    second: unity_spinner_96_spritesheet_16
+  - first:
+      213: -2255078179775711010
+    second: unity_spinner_96_spritesheet_17
+  - first:
+      213: 2425015606353759231
+    second: unity_spinner_96_spritesheet_18
+  - first:
+      213: -7157907305280091494
+    second: unity_spinner_96_spritesheet_19
+  - first:
+      213: 1252934424931290405
+    second: unity_spinner_96_spritesheet_20
+  - first:
+      213: -4638262289745343868
+    second: unity_spinner_96_spritesheet_21
+  - first:
+      213: -6165062030026086797
+    second: unity_spinner_96_spritesheet_22
+  - first:
+      213: -433684134675195188
+    second: unity_spinner_96_spritesheet_23
+  - first:
+      213: -3126612922714915296
+    second: unity_spinner_96_spritesheet_24
+  - first:
+      213: 9049403917416840342
+    second: unity_spinner_96_spritesheet_25
+  - first:
+      213: -6416723540277488441
+    second: unity_spinner_96_spritesheet_26
+  - first:
+      213: 210318527440199969
+    second: unity_spinner_96_spritesheet_27
+  - first:
+      213: 5408629347208680415
+    second: unity_spinner_96_spritesheet_28
+  - first:
+      213: 4441495991678315972
+    second: unity_spinner_96_spritesheet_29
+  - first:
+      213: -3541850411762250881
+    second: unity_spinner_96_spritesheet_30
+  - first:
+      213: -5018900275043539103
+    second: unity_spinner_96_spritesheet_31
+  - first:
+      213: 6672191246514764598
+    second: unity_spinner_96_spritesheet_32
+  - first:
+      213: -3447143849674838935
+    second: unity_spinner_96_spritesheet_33
+  - first:
+      213: 1140119496418919552
+    second: unity_spinner_96_spritesheet_34
+  - first:
+      213: -4121661919418984454
+    second: unity_spinner_96_spritesheet_35
+  - first:
+      213: 4285728072526831058
+    second: unity_spinner_96_spritesheet_36
+  - first:
+      213: -6089335766542613956
+    second: unity_spinner_96_spritesheet_37
+  - first:
+      213: 3520354760821483370
+    second: unity_spinner_96_spritesheet_38
+  - first:
+      213: 5191529816245255703
+    second: unity_spinner_96_spritesheet_39
+  - first:
+      213: -6464448725395350234
+    second: unity_spinner_96_spritesheet_40
+  - first:
+      213: -2766836983312236927
+    second: unity_spinner_96_spritesheet_41
+  - first:
+      213: -5049955558748343550
+    second: unity_spinner_96_spritesheet_42
+  - first:
+      213: 1921272481630688637
+    second: unity_spinner_96_spritesheet_43
+  - first:
+      213: 408497313170104041
+    second: unity_spinner_96_spritesheet_44
+  - first:
+      213: 6223689241627568440
+    second: unity_spinner_96_spritesheet_45
+  - first:
+      213: 6212087151109679289
+    second: unity_spinner_96_spritesheet_46
+  - first:
+      213: 6373949243569719971
+    second: unity_spinner_96_spritesheet_47
+  - first:
+      213: -801978369870070611
+    second: unity_spinner_96_spritesheet_48
+  - first:
+      213: -3828572324645309353
+    second: unity_spinner_96_spritesheet_49
+  - first:
+      213: 8649599735217034635
+    second: unity_spinner_96_spritesheet_50
+  - first:
+      213: -6756143071146152138
+    second: unity_spinner_96_spritesheet_51
+  - first:
+      213: -7429133136149220110
+    second: unity_spinner_96_spritesheet_52
+  - first:
+      213: 3887867374278935779
+    second: unity_spinner_96_spritesheet_53
+  - first:
+      213: 3614196131304368857
+    second: unity_spinner_96_spritesheet_54
+  - first:
+      213: -2994082631146802947
+    second: unity_spinner_96_spritesheet_55
+  - first:
+      213: -1527118607836958789
+    second: unity_spinner_96_spritesheet_56
+  - first:
+      213: 4127970983043497372
+    second: unity_spinner_96_spritesheet_57
+  - first:
+      213: -8769275077679451817
+    second: unity_spinner_96_spritesheet_58
+  - first:
+      213: -2136981709853489486
+    second: unity_spinner_96_spritesheet_59
+  - first:
+      213: 956776029431303019
+    second: unity_spinner_96_spritesheet_60
+  - first:
+      213: -6025926029537507672
+    second: unity_spinner_96_spritesheet_61
+  - first:
+      213: -2484359681065594305
+    second: unity_spinner_96_spritesheet_62
+  - first:
+      213: -4761910055345396596
+    second: unity_spinner_96_spritesheet_63
+  - first:
+      213: -1682061168816635695
+    second: unity_spinner_96_spritesheet_64
+  - first:
+      213: 5117899839241496819
+    second: unity_spinner_96_spritesheet_65
+  - first:
+      213: -5741131151996606722
+    second: unity_spinner_96_spritesheet_66
+  - first:
+      213: -5912800022449729129
+    second: unity_spinner_96_spritesheet_67
+  - first:
+      213: 5957199460782100799
+    second: unity_spinner_96_spritesheet_68
+  - first:
+      213: -2189002418424315674
+    second: unity_spinner_96_spritesheet_69
+  - first:
+      213: -7779470400674359711
+    second: unity_spinner_96_spritesheet_70
+  - first:
+      213: -7898955862746741788
+    second: unity_spinner_96_spritesheet_71
+  - first:
+      213: -5191307075748181183
+    second: unity_spinner_96_spritesheet_72
+  - first:
+      213: -3107451858606827775
+    second: unity_spinner_96_spritesheet_73
+  - first:
+      213: -188460070984519571
+    second: unity_spinner_96_spritesheet_74
+  - first:
+      213: 5084915790922884096
+    second: unity_spinner_96_spritesheet_75
+  - first:
+      213: -8566504172242704074
+    second: unity_spinner_96_spritesheet_76
+  - first:
+      213: -458832388460874153
+    second: unity_spinner_96_spritesheet_77
+  - first:
+      213: -3147538708804293730
+    second: unity_spinner_96_spritesheet_78
+  - first:
+      213: -7052124533255374819
+    second: unity_spinner_96_spritesheet_79
+  - first:
+      213: -1706986901799676313
+    second: unity_spinner_96_spritesheet_80
+  - first:
+      213: 2209665166424960222
+    second: unity_spinner_96_spritesheet_81
+  - first:
+      213: 6744885356004208063
+    second: unity_spinner_96_spritesheet_82
+  - first:
+      213: -3358571912983734037
+    second: unity_spinner_96_spritesheet_83
+  - first:
+      213: -5051746069182988991
+    second: unity_spinner_96_spritesheet_84
+  - first:
+      213: 3748966099101465288
+    second: unity_spinner_96_spritesheet_85
+  - first:
+      213: -5709788919739793263
+    second: unity_spinner_96_spritesheet_86
+  - first:
+      213: 6094597262264856234
+    second: unity_spinner_96_spritesheet_87
+  - first:
+      213: 749111518071665673
+    second: unity_spinner_96_spritesheet_88
+  - first:
+      213: -4863257037768617013
+    second: unity_spinner_96_spritesheet_89
+  - first:
+      213: -3976911242006503826
+    second: unity_spinner_96_spritesheet_90
+  - first:
+      213: 4153651251949078765
+    second: unity_spinner_96_spritesheet_91
+  - first:
+      213: -9176692666260112551
+    second: unity_spinner_96_spritesheet_92
+  - first:
+      213: -4574473254394488246
+    second: unity_spinner_96_spritesheet_93
+  - first:
+      213: -7770433817378279767
+    second: unity_spinner_96_spritesheet_94
+  - first:
+      213: -8437518674511492711
+    second: unity_spinner_96_spritesheet_95
+  - first:
+      213: -897529436919537298
+    second: unity_spinner_96_spritesheet_96
+  - first:
+      213: 3514425077613274121
+    second: unity_spinner_96_spritesheet_97
+  - first:
+      213: 2749240017392604024
+    second: unity_spinner_96_spritesheet_98
+  - first:
+      213: 2298146273035047252
+    second: unity_spinner_96_spritesheet_99
+  - first:
+      213: 734799202983719016
+    second: unity_spinner_96_spritesheet_100
+  - first:
+      213: 3663913603234868016
+    second: unity_spinner_96_spritesheet_101
+  - first:
+      213: -270210552228708319
+    second: unity_spinner_96_spritesheet_102
+  - first:
+      213: 5993666691714772879
+    second: unity_spinner_96_spritesheet_103
+  - first:
+      213: -5274630549945250710
+    second: unity_spinner_96_spritesheet_104
+  - first:
+      213: 5413549777970414965
+    second: unity_spinner_96_spritesheet_105
+  - first:
+      213: -5676808447652525759
+    second: unity_spinner_96_spritesheet_106
+  - first:
+      213: -2848132320750880844
+    second: unity_spinner_96_spritesheet_107
+  - first:
+      213: 7262581805549291292
+    second: unity_spinner_96_spritesheet_108
+  - first:
+      213: 9177646827352430472
+    second: unity_spinner_96_spritesheet_109
+  - first:
+      213: 4767483366222346071
+    second: unity_spinner_96_spritesheet_110
+  - first:
+      213: -8664408299525871428
+    second: unity_spinner_96_spritesheet_111
+  - first:
+      213: 2106732501911588220
+    second: unity_spinner_96_spritesheet_112
+  - first:
+      213: -4568741666366159085
+    second: unity_spinner_96_spritesheet_113
+  - first:
+      213: 7605713273430670273
+    second: unity_spinner_96_spritesheet_114
+  - first:
+      213: 3986644861500557148
+    second: unity_spinner_96_spritesheet_115
+  - first:
+      213: 8407918546701712372
+    second: unity_spinner_96_spritesheet_116
+  - first:
+      213: 9221763126242702856
+    second: unity_spinner_96_spritesheet_117
+  - first:
+      213: 7418913709937664692
+    second: unity_spinner_96_spritesheet_118
+  - first:
+      213: 7611067319848618665
+    second: unity_spinner_96_spritesheet_119
+  - first:
+      213: 8992342403874731487
+    second: unity_spinner_96_spritesheet_120
+  - first:
+      213: -4321761061923341865
+    second: unity_spinner_96_spritesheet_121
+  - first:
+      213: -7810644080987196738
+    second: unity_spinner_96_spritesheet_122
+  - first:
+      213: 8337810920844039492
+    second: unity_spinner_96_spritesheet_123
+  - first:
+      213: -1542875632783100632
+    second: unity_spinner_96_spritesheet_124
+  - first:
+      213: 2511456696187480521
+    second: unity_spinner_96_spritesheet_125
+  - first:
+      213: 5641725128234724815
+    second: unity_spinner_96_spritesheet_126
+  - first:
+      213: 6367025156711946864
+    second: unity_spinner_96_spritesheet_127
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcd2efe26eb89200800000000000000
+      internalID: 187108716676570332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57120f44e27dd810800000000000000
+      internalID: 1791714551666972507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f232a07e3631863f0800000000000000
+      internalID: -907454005116263633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86671c196cd562d0800000000000000
+      internalID: -3285978009095936372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e665efbfc57adad0800000000000000
+      internalID: -2676697493380176153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce18c7df5be1094d0800000000000000
+      internalID: -3129967974031785492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b082831d7b590080800000000000000
+      internalID: -9220738169308020552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5dedfc6cee6b9f0800000000000000
+      internalID: -452912174845733450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837681308440c7ab0800000000000000
+      internalID: -5009123978206746824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab17ce5471e8f74d0800000000000000
+      internalID: -3134630585018060358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c31caa5e7afd300800000000000000
+      internalID: 279126306774400116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8caebc74d22ae53d0800000000000000
+      internalID: -3215954768534181176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fcceb00ed271b70800000000000000
+      internalID: 8869608431425474443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d2bef679778fab0800000000000000
+      internalID: -4974094296129262333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2c56150844bf750800000000000000
+      internalID: 6339736218366231268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: unity_spinner_96_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b606f1e2960c040800000000000000
+      internalID: 4665844860771658639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4407444a592428345abc8d6bedcf7060
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      unity_spinner_96_spritesheet_0: 187108716676570332
+      unity_spinner_96_spritesheet_1: 1791714551666972507
+      unity_spinner_96_spritesheet_10: 279126306774400116
+      unity_spinner_96_spritesheet_11: -3215954768534181176
+      unity_spinner_96_spritesheet_12: 8869608431425474443
+      unity_spinner_96_spritesheet_13: -4974094296129262333
+      unity_spinner_96_spritesheet_14: 6339736218366231268
+      unity_spinner_96_spritesheet_15: 4665844860771658639
+      unity_spinner_96_spritesheet_2: -907454005116263633
+      unity_spinner_96_spritesheet_3: -3285978009095936372
+      unity_spinner_96_spritesheet_4: -2676697493380176153
+      unity_spinner_96_spritesheet_5: -3129967974031785492
+      unity_spinner_96_spritesheet_6: -9220738169308020552
+      unity_spinner_96_spritesheet_7: -452912174845733450
+      unity_spinner_96_spritesheet_8: -5009123978206746824
+      unity_spinner_96_spritesheet_9: -3134630585018060358
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

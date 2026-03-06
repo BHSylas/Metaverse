@@ -45,4 +45,9 @@ public static class DialogStorage
         }
         return dict.ContainsKey(place) ? dict[place] : new List<Dialog>();
     }
+
+    public static List<Dialog> Get()
+    {
+        return dict.Values.SelectMany(list => list).ToList();
+    }
 }

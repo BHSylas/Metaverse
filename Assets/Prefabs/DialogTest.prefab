@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8648028502347481982}
   - component: {fileID: 542398543556589299}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DialogBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7940628306302665876, guid: 7c282be3a5524c24cbb4e8d76b3ea828, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -232,6 +232,7 @@ MonoBehaviour:
   dialogText: {fileID: 4554121089971173406}
   choiceRoot: {fileID: 2276161598297788237}
   choiceButtonPrefab: {fileID: 6174780252222458788, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+  dialogBox: {fileID: 6051531560835016210}
 --- !u!1 &7225424914117282216
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,8 +267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 608.94006, y: -12.6333}
-  m_SizeDelta: {x: 1217.8801, y: 75.2665}
+  m_AnchoredPosition: {x: 629.7668, y: -13.92}
+  m_SizeDelta: {x: 1176.2266, y: 72.692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2151575645047623228
 CanvasRenderer:
@@ -297,10 +298,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Dialog ABCDEFG
+  m_text: "\uD14C\uC2A4\uD2B8 \uB2E4\uC774\uC5BC\uB85C\uADF8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5ae33b2687665f147a1ae1e940afb024, type: 2}
-  m_sharedMaterial: {fileID: -4084007890664395199, guid: 5ae33b2687665f147a1ae1e940afb024, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f16cfb7112907f74eba515dc8e88831b, type: 2}
+  m_sharedMaterial: {fileID: 736340272170696675, guid: f16cfb7112907f74eba515dc8e88831b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -539,6 +540,22 @@ PrefabInstance:
       propertyPath: m_text
       value: "\uC120\uD0DD\uC9C0"
       objectReference: {fileID: 0}
+    - target: {fileID: 3112774514050352752, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ae33b2687665f147a1ae1e940afb024, type: 2}
+    - target: {fileID: 3112774514050352752, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112774514050352752, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4084007890664395199, guid: 5ae33b2687665f147a1ae1e940afb024, type: 2}
+    - target: {fileID: 3112774514050352752, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4393756842714886785, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -566,6 +583,26 @@ PrefabInstance:
     - target: {fileID: 5431977552948580649, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
       propertyPath: m_Name
       value: Button 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415375363631623163, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415375363631623163, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7940628306302665876, guid: 7c282be3a5524c24cbb4e8d76b3ea828, type: 3}
+    - target: {fileID: 7415375363631623163, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8301887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415375363631623163, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6908638
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415375363631623163, guid: 19353d7e06faf3e42b6da115c8953435, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6696333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
