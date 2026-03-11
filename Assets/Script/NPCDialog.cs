@@ -88,14 +88,9 @@ public class NPCDialog : MonoBehaviour
 
         if (!string.IsNullOrEmpty(d.question))
         {
-            dialogUI.dialogBox.SetActive(true);
-            dialogUI.Conversation(d.question);
-            JSBridge.OnQuestionShown(d.id);
+            dialogUI.Hide(); // 대화창 닫기
 
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-
-            dialogUI.Hide();
+            JSBridge.OnQuestionShown(d.id); // 웹에 퀴즈 표시 요청
 
             yield break;
         }

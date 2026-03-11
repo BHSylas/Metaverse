@@ -70,16 +70,8 @@ public class NPCDialogNoMove : MonoBehaviour
 
         if (!string.IsNullOrEmpty(d.question))
         {
-            dialogUI.Conversation(d.question);
-            JSBridge.OnQuestionShown(d.id);
-
-
-
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-
-            dialogUI.Hide();
-
+            dialogUI.Hide();              // 대화창 닫기
+            JSBridge.OnQuestionShown(d.id);  // 웹에 문제 표시 요청
             yield break;
         }
 
