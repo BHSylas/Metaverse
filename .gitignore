@@ -99,3 +99,12 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+
+Build/
+Builds/
+BuildTests/
+*.zip
+*.data
+*.wasm
+*.ttc
